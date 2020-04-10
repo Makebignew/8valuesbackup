@@ -40,7 +40,7 @@ function next_question(mult) {
     }
 }
 function prev_question() {
-    if (prev_answer == fail) {
+    if (prev_answer == null) {
         return;
     }
     qn--;
@@ -49,7 +49,7 @@ function prev_question() {
     govt -= prev_answer * questions[qn].effect.govt;
     scty -= prev_answer * questions[qn].effect.scty;
     envo -= prev_answer * questions[qn].effect.envo;
-    prev_answer = fail;    
+    prev_answer = null;    
     init_question();
 
 }
