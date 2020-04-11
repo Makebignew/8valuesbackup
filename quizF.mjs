@@ -15,7 +15,7 @@ for (var i = 0; i < questions.length; i++) {
 function init_question() {
     document.getElementById("question-text").innerHTML = questions[qn].question;
     document.getElementById("question-number").innerHTML = "第" + (qn + 1) + "题" + " 剩余 " + (questions.length - qn - 1) + "题";
-    if (qn == null) {
+    if (prev_answer == null) {
         document.getElementById("back_button").style.display = 'none';
         document.getElementById("back_button_off").style.display = 'block';
     } else {
